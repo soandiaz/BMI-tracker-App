@@ -1,0 +1,16 @@
+import pandas as pd
+df=pd.read_csv('bmi.csv')
+df
+def calculate_bmi():
+  while(1):
+    Gender=input('Enter Gender: ')
+    Height=float(input('Enter Height: '))
+    Weight=float(input('Enter Weight: ')) 
+    for i in range(len(df)):
+      if df['Gender'][i]==Gender and df['Height'][i]==Height and df['Weight'][i]==Weight:
+        print(df['Index'][i])
+        break
+    else:
+        print('Invalid input')
+if __name__ == '__main__':
+  calculate_bmi()
